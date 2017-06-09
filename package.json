@@ -2,7 +2,9 @@
   "name": "your-project",
   "version": "1.0.0",
   "license": "MIT",
-  "browserslist": ["> 1%"],
+  "browserslist": [
+    "> 1%"
+  ],
   "scripts": {
     "start": "yarn dev:start",
     "dev:start": "nodemon -e js,jsx --ignore lib --ignore dist --exec babel-node src/server",
@@ -10,7 +12,7 @@
     "prod:build": "rimraf lib dist && babel src -d lib --ignore .test.js && cross-env NODE_ENV=production webpack -p --progress",
     "prod:start": "cross-env NODE_ENV=production pm2 start lib/server && pm2 logs",
     "prod:stop": "pm2 delete server",
-    "lint": "eslint src webpack.config.babel.js --ext .js,.jsx",
+    "lint": "standard src/**/*.js src/**/*.jsx",
     "test": "yarn lint && flow && jest --coverage",
     "precommit": "yarn test",
     "prepush": "yarn test && yarn prod:build"
@@ -25,6 +27,8 @@
     "react-dom": "^15.4.2",
     "react-hot-loader": "^3.0.0-beta.6",
     "react-redux": "^5.0.3",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
     "redux": "^3.6.0",
     "redux-actions": "^2.0.1",
     "redux-thunk": "^2.2.0"
@@ -57,5 +61,13 @@
     "rimraf": "^2.6.1",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.1"
+  },
+  "standard": {
+    "globals": [
+        "expect",
+        "test"
+    ],
+    "plugins": [ "flowtype" ],
+    "parser": "babel-eslint"
   }
 }
