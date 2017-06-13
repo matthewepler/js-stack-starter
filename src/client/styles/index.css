@@ -1,0 +1,91 @@
+html {
+  font-size: 12pt; }
+
+body {
+  background: white;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0; }
+
+.main-container {
+  overflow-x: auto; }
+
+.main-container .nav-bar {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  padding: 20px 20px 0 20px; }
+
+.main-container .nav-bar img {
+  color: black;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  margin-right: 2rem;
+  width: 75px; }
+
+.main-container .nav-bar button {
+  background: none;
+  border-style: none;
+  color: #4B4B4B; }
+
+.hide {
+  display: none; }
+
+.toggle-button, #filter-toggle-menu #filter-menu select {
+  background: black;
+  border: solid 2px black;
+  color: white;
+  border-radius: 10px;
+  font-size: 1rem;
+  height: 23px;
+  line-height: 24px;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 8px;
+  text-align: center; }
+
+#device-list {
+  padding-left: 20px; }
+
+#filter-toggle-menu {
+  display: flex;
+  flex-wrap: wrap; }
+
+#filter-toggle-menu #filter-menu {
+  display: flex; }
+
+#filter-toggle-menu #filter-menu input {
+  background: white;
+  border: solid 2px black;
+  border-radius: 5px;
+  color: black;
+  font-size: 1rem;
+  height: 23px;
+  padding: 3px 10px 3px 10px;
+  text-align: center;
+  width: 110px; }
+
+#filter-toggle-menu #filter-menu select {
+  background: white;
+  color: black;
+  height: 33px;
+  margin-left: 0.5rem; }
+
+#filter-toggle-menu #filter-menu .filter-button-on {
+  background: black;
+  border: solid 2px black;
+  color: white; }
+
+#filter-toggle-menu #toggle-menu {
+  display: flex;
+  flex-wrap: wrap; }
+
+#filter-toggle-menu #toggle-menu .toggle-button-off {
+  background: white;
+  border: solid 2px black;
+  color: black; }
+
+.status-inactive {
+  opacity: 0.5; }

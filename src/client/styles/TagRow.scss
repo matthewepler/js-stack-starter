@@ -1,0 +1,129 @@
+@import 'base';
+
+h4 {
+  font-size: 0.8rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+
+.tag-row {
+  border-top: solid 1px $lightgrey;
+  display: flex;
+  justify-content: flex-start;
+  padding: 25px 25px 25px 0;
+
+  .envHi, .envLo, .orientation, .meta, .accel, .magno, .gyro {
+    // width: 120px; // see .data-row
+  }
+}
+
+.tag-section {
+  margin-right: 4rem;
+}
+
+.info {
+  width: 120px;
+
+  & div  { 
+    margin-bottom: 10px; 
+  }
+
+  .tagId {}
+  .name {}
+  .site {
+    background: $lightgrey;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 0.9rem;
+    padding: 5px;
+    max-width: 100%;
+    text-align: center;
+    width: 75px;
+  }
+}
+
+.last-heard {
+  .last-heard-data {}
+}
+
+.events-wrapper, .motions-wrapper {
+  min-width: 300px;
+  max-width: 300px;
+
+  .events, .motions {
+    align-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.data-row {
+  display: flex;
+  margin-bottom: 8px; 
+  width: 110px;
+
+  .data-row-label {
+    font-weight: 600;
+  }
+}
+
+.orientation, .accel, .magno, .gyro {
+  .data-row-label {
+    width: 30px;
+  }
+}
+
+.envHi .data-row-label {
+  width: 85px;
+}
+
+.envLo .data-row-label {
+  width: 80px;
+}
+
+.meta .data-row-label {
+  width: 50px;
+}
+
+.envHi, .envLo, .orientation, .meta, .accel, .magno, .gyro {
+  font-size: 0.9rem;
+
+  & div {
+    margin-bottom: 5px;
+  }
+}
+
+.single-row {
+  display: flex;
+  max-width: 500px;
+  @include forSmallScreens($mobile) {
+    display: block;
+  }
+
+  & div {
+    margin-right: 25px;
+    max-width: 150px;
+  }
+
+  .tagId { 
+    order: 1;
+    width: 75px;
+  }
+  .site { 
+    order: 2;
+    text-align: center;
+    min-width: 75px;
+    max-width: 76px;
+    word-wrap: break-word;
+  }
+  .name { 
+    order: 3;
+    width: 125px;
+  }
+
+}
+
+.expand-max-width {
+  width: 300px;
+}

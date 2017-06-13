@@ -1,11 +1,12 @@
 // @flow
 
 import React from 'react'
-import { APP_NAME } from '../shared/config'
+
+import MainContainer from './containers/MainContainer'
 
 const App = () =>
   <div>
-    <h1>{APP_NAME}</h1>
+    <MainContainer />
   </div>
 
 export default App

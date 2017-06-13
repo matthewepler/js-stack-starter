@@ -1,0 +1,72 @@
+html {
+  font-size: 12pt; }
+
+body {
+  background: white;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0; }
+
+.pill {
+  border: solid 3px #F2F2F2;
+  border-radius: 5px;
+  display: flex;
+  font-size: 0.85rem;
+  height: 30px;
+  margin: 2px 0 2px 2px;
+  transition: all 2s; }
+
+.pill .pill-left {
+  background: #F2F2F2;
+  font-weight: 500;
+  padding: 5px;
+  text-align: center;
+  width: 85px; }
+
+.pill .pill-right {
+  padding: 5px;
+  margin-left: 0px;
+  text-align: center;
+  width: 55px; }
+
+.ping-border-orange {
+  animation-duration: 2s;
+  animation-name: pingBorderOrange; }
+
+.ping-background-orange {
+  animation-duration: 2s;
+  animation-name: pingBackgroundOrange; }
+
+.ping-border-blue {
+  animation-duration: 2s;
+  animation-name: pingBorderBlue; }
+
+.ping-background-blue {
+  animation-duration: 2s;
+  animation-name: pingBackgroundBlue; }
+
+@keyframes pingBorderOrange {
+  from {
+    border-color: #FF6900; }
+  to {
+    border-color: #F2F2F2; } }
+
+@keyframes pingBackgroundOrange {
+  from {
+    background: #FF6900; }
+  to {
+    background: #F2F2F2; } }
+
+@keyframes pingBorderBlue {
+  from {
+    border-color: #6D9FFF; }
+  to {
+    border-color: #F2F2F2; } }
+
+@keyframes pingBackgroundBlue {
+  from {
+    background: #6D9FFF; }
+  to {
+    background: #F2F2F2; } }

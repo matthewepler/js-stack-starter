@@ -1,0 +1,102 @@
+@import 'base';
+
+.main-container {
+  overflow-x: auto;
+
+  .nav-bar {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    padding: 20px 20px 0 20px;
+
+    img {
+      color: black;
+      cursor: pointer;
+      margin-bottom: 1.5rem;
+      margin-right: 2rem;
+      width: 75px;
+    }
+
+    button {
+      background: none;
+      border-style: none;
+      color: $darkgrey;
+    }
+  }  
+}
+
+.hide {
+  display: none;
+}
+
+.toggle-button {
+  background: black;
+  border: solid 2px black;
+  color: white;
+  border-radius: 10px;
+  font-size: 1rem;
+  height: 23px;
+  line-height: 24px;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 8px;
+  text-align: center;
+}
+
+#device-list {
+  padding-left: 20px;
+
+  & > div:hover{
+    // border: 1px solid black;
+  }
+}
+
+#filter-toggle-menu {
+  display: flex;
+  flex-wrap: wrap;
+
+  #filter-menu  {
+    display: flex; 
+
+    input  {
+      background: white;
+      border: solid 2px black;
+      border-radius: 5px;
+      color: black;
+      font-size: 1rem;
+      height: 23px;
+      padding: 3px 10px 3px 10px;
+      text-align: center;
+      width: 110px;
+    }
+
+    select {
+      @extend .toggle-button;
+      background: white;
+      color: black;
+      height: 33px;
+      margin-left: 0.5rem;
+    }
+
+    .filter-button-on {
+      background: black;
+      border: solid 2px black;
+      color: white;
+    }
+  }
+  
+  #toggle-menu {
+    display: flex;
+    flex-wrap: wrap;
+
+    .toggle-button-off {
+      background: white;
+      border: solid 2px black;
+      color: black;
+    }
+  }
+}
+
+.status-inactive {
+  opacity: 0.5;
+}

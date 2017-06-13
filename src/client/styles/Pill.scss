@@ -1,0 +1,87 @@
+@import 'base';
+
+.pill {
+  border: solid 3px $lightgrey;
+  border-radius: 5px;
+  display: flex;
+  font-size: 0.85rem;
+  height: 30px;
+  margin: 2px 0 2px 2px;
+  transition: all 2s;
+
+
+  .pill-left {
+    background: $lightgrey;
+    font-weight: 500;
+    padding: 5px;
+    text-align: center;
+    width: 85px;
+  }
+
+  .pill-right {
+    padding: 5px;
+    margin-left: 0px;
+    text-align: center;
+    width: 55px;
+  }
+}
+
+.ping-border-orange {
+  animation-duration: 2s;
+  animation-name: pingBorderOrange;
+}
+
+.ping-background-orange {
+  animation-duration: 2s;
+  animation-name: pingBackgroundOrange;
+}
+
+.ping-border-blue {
+  animation-duration: 2s;
+  animation-name: pingBorderBlue;
+}
+
+.ping-background-blue {
+  animation-duration: 2s;
+  animation-name: pingBackgroundBlue;
+}
+
+@keyframes pingBorderOrange {
+  from {
+    border-color: $orange;
+  }
+  
+  to {
+    border-color: $lightgrey;
+  }
+}
+
+@keyframes pingBackgroundOrange {
+  from {
+    background: $orange;
+  }
+  
+  to {
+    background: $lightgrey;
+  }
+}
+
+@keyframes pingBorderBlue {
+  from {
+    border-color: $blue;
+  }
+  
+  to {
+    border-color: $lightgrey;
+  }
+}
+
+@keyframes pingBackgroundBlue {
+  from {
+    background: $blue;
+  }
+  
+  to {
+    background: $lightgrey;
+  }
+}
