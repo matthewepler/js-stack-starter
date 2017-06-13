@@ -4,7 +4,7 @@ import compression from 'compression'
 import express from 'express'
 
 import { APP_NAME, STATIC_PATH, WEB_PORT } from '../shared/config'
-import { helloEndpointRoute } from '../shared/routes'
+// import { helloEndpointRoute } from '../shared/routes'
 import { isProd } from '../shared/util'
 import renderApp from './render-app'
 
@@ -18,12 +18,12 @@ app.get('/', (req, res) => {
   res.send(renderApp(APP_NAME))
 })
 
-app.get(helloEndpointRoute(), (req, res) => {
-  res.json({ serverMessage: `Hello from the server! (received ${req.params.num})` })
-})
+// API EXAMPLE
+// app.get(helloEndpointRoute(), (req, res) => {
+//   res.json({ serverMessage: `Hello from the server! (received ${req.params.num})` })
+// })
 
 app.listen(WEB_PORT, () => {
-  // eslint-disable-next-line no-console
   console.log(`Server running on port ${WEB_PORT} ${isProd ? '(production)'
     : '(development).\nKeep "yarn dev:wds" running in an other terminal'}.`)
 })
